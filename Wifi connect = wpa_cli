@@ -1,0 +1,53 @@
+Để kết nối WiFi sử dụng wpa_cli trên Linux, bạn có thể thực hiện theo các bước sau:
+
+Cài đặt wpa_supplicant:
+Nếu bạn chưa có wpa_supplicant cài đặt, bạn có thể cài đặt nó bằng lệnh:
+sudo apt-get install wpasupplicant
+
+Cấu hình wpa_supplicant:
+
+Tạo hoặc chỉnh sửa file cấu hình /etc/wpa_supplicant/wpa_supplicant.conf để thêm thông tin mạng WiFi của bạn.
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+
+
+Thêm vào file cấu hình này thông tin mạng WiFi:
+
+network={
+    ssid="Tên_WiFi"
+    psk="Mật_khẩu_WiFi"
+}
+
+Sử dụng wpa_cli để kết nối:
+
+Bạn có thể sử dụng wpa_cli để quét và kết nối tới mạng WiFi. Dưới đây là các lệnh cơ bản:
+
+Mở wpa_cli:
+sudo wpa_cli
+
+Quét mạng WiFi xung quanh:
+scan
+
+Xem kết quả quét:
+scan_results
+
+Thêm mạng WiFi:
+add_network
+
+Chỉnh sửa thông tin mạng:
+set_network 0 ssid "\"Tên_WiFi\""
+set_network 0 psk "\"Mật_khẩu_WiFi\""
+
+Kích hoạt mạng:
+enable_network 0
+
+Lưu cấu hình:
+save_config
+
+Kết nối mạng:
+select_network 0
+
+Kiểm tra kết nối:
+Sau khi thực hiện các lệnh trên, bạn có thể kiểm tra trạng thái kết nối WiFi bằng lệnh:
+sudo wpa_cli status
+
+Nếu bạn gặp bất kỳ lỗi nào, hãy kiểm tra lại các bước trên và đảm bảo rằng thông tin SSID và mật khẩu WiFi đã nhập chính xác.
