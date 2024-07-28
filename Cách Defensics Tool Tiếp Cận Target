@@ -1,0 +1,49 @@
+# Cách Defensics Tool Tiếp Cận Target
+
+## 1. Chuẩn Bị Môi Trường Kiểm Tra
+- **Xác định Mục Tiêu**: Chọn giao thức, phần mềm hoặc thiết bị cần kiểm tra.
+- **Thiết lập Kết Nối**: Đảm bảo rằng Defensics có thể giao tiếp với mục tiêu thông qua mạng hoặc giao diện cần thiết.
+
+## 2. Cấu Hình Test Suite
+- **Chọn Test Suite Phù Hợp**: Chọn test suite phù hợp với mục tiêu từ danh sách các test suite của Defensics.
+- **Tùy Chỉnh Cấu Hình**: Cấu hình test suite với các tham số như địa chỉ IP, cổng, giao thức, và các tùy chọn khác.
+
+## 3. Chạy Kiểm Tra
+- **Khởi Động Kiểm Tra**: Bắt đầu quá trình fuzzing bằng cách khởi động test suite.
+- **Quan Sát Hành Vi**: Theo dõi hành vi của mục tiêu khi nhận các đầu vào từ Defensics.
+
+## 4. Thu Thập và Phân Tích Kết Quả
+- **Ghi Nhận Sự Cố**: Defensics ghi nhận các sự cố xảy ra và cung cấp thông tin chi tiết.
+- **Phân Tích Sự Cố**: Xem xét các lỗi và sự cố để xác định nguyên nhân và mức độ nghiêm trọng.
+
+## 5. Báo Cáo Kết Quả
+- **Tạo Báo Cáo**: Defensics tạo ra các báo cáo chi tiết về quá trình kiểm tra.
+- **Đưa Ra Đề Xuất**: Đưa ra các biện pháp khắc phục dựa trên kết quả kiểm tra.
+
+## 6. Khắc Phục và Kiểm Tra Lại
+- **Sửa Chữa Lỗi**: Các nhà phát triển và kỹ sư bảo mật sửa chữa các lỗi được phát hiện.
+- **Kiểm Tra Lại**: Chạy lại Defensics để đảm bảo rằng các lỗi đã được khắc phục và không xuất hiện lỗi mới.
+
+# Ví Dụ Cụ Thể: Kiểm Tra Máy Chủ HTTP
+1. **Chuẩn Bị Môi Trường**:
+   - Xác định địa chỉ IP và cổng của máy chủ HTTP.
+   - Đảm bảo rằng Defensics có thể kết nối với máy chủ này.
+
+2. **Cấu Hình Test Suite**:
+   - Chọn test suite cho giao thức HTTP.
+   - Cấu hình test suite với địa chỉ IP và cổng của máy chủ.
+
+3. **Chạy Kiểm Tra**:
+   - Khởi động kiểm tra và gửi các yêu cầu HTTP không hợp lệ hoặc ngẫu nhiên đến máy chủ.
+
+4. **Thu Thập và Phân Tích Kết Quả**:
+   - Ghi nhận các phản hồi từ máy chủ.
+   - Xác định các lỗi hoặc sự cố dựa trên các phản hồi này.
+
+5. **Báo Cáo Kết Quả**:
+   - Tạo báo cáo chi tiết về các lỗi được phát hiện.
+   - Đưa ra các đề xuất khắc phục.
+
+6. **Khắc Phục và Kiểm Tra Lại**:
+   - Sửa chữa các lỗi trên máy chủ HTTP.
+   - Chạy lại Defensics để đảm bảo các lỗi đã được khắc phục.
