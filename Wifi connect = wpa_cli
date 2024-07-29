@@ -7,7 +7,9 @@ sudo apt-get install wpasupplicant
 Cấu hình wpa_supplicant:
 
 Tạo hoặc chỉnh sửa file cấu hình /etc/wpa_supplicant/wpa_supplicant.conf để thêm thông tin mạng WiFi của bạn.
+```bash
 sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+```
 
 
 Thêm vào file cấu hình này thông tin mạng WiFi:
@@ -129,5 +131,6 @@ save_config
 # 9. Kiểm tra trạng thái kết nối
 status
 
+sudo systemctl restart wpa_supplicant
 
 
