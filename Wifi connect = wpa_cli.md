@@ -74,43 +74,58 @@ scan
 scan_results
 ```
 # 4. Thêm mạng WiFi
+```bash
 add_network
+```
 # Lệnh này sẽ trả về một ID mạng (thường là 0 nếu bạn chưa thêm mạng nào trước đó).
 
 # 5. Cấu hình mạng WiFi
+```bash
 set_network <network_id> ssid "\"Tên_WiFi\""
 set_network <network_id> psk "\"Mật_khẩu_WiFi\""
-
+```
 # 6. Kích hoạt mạng
+```bash
 enable_network <network_id>
-
+```
 # 7. Chọn mạng để kết nối
+```bash
 select_network <network_id>
-
+```
 # 8. Lưu cấu hình
+```bash
 save_config
+```
 
 # 9. Xóa mạng
+```bash
 remove_network <network_id>
-
+```
 # 10. Hủy kích hoạt mạng
+```bash
 disable_network <network_id>
-
+```
 # 11. Kiểm tra trạng thái kết nối
+```bash
 status
-
+```
 # 12. Xem danh sách các mạng đã thêm
+```bash
 list_networks
-
+```
 # 13. Ngắt kết nối khỏi mạng hiện tại
+```bash
 disconnect
-
+```
 # 14. Kết nối lại mạng
+```bash
 reconnect
-
+```
 # 15. Khởi động lại wpa_supplicant
+```bash
 reconfigure
-
+```
+```bash
 # Ví dụ cụ thể:
 # Giả sử bạn muốn kết nối đến mạng WiFi có SSID là "MyWiFi" và mật khẩu là "password123".
 
@@ -144,5 +159,5 @@ save_config
 status
 
 sudo systemctl restart wpa_supplicant
-
+```bash
 
