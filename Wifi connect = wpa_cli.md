@@ -159,5 +159,5 @@ save_config
 status
 
 sudo systemctl restart wpa_supplicant
-```bash
+```
 
