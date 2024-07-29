@@ -13,54 +13,66 @@ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 
 
 Thêm vào file cấu hình này thông tin mạng WiFi:
-
+```bash
 network={
     ssid="Tên_WiFi"
     psk="Mật_khẩu_WiFi"
 }
-
+```
 Sử dụng wpa_cli để kết nối:
 
 Bạn có thể sử dụng wpa_cli để quét và kết nối tới mạng WiFi. Dưới đây là các lệnh cơ bản:
 
 Mở wpa_cli:
+```bash
 sudo wpa_cli
-
+```
 Quét mạng WiFi xung quanh:
+```bash
 scan
-
+```
 Xem kết quả quét:
+```bash
 scan_results
-
+```
 Thêm mạng WiFi:
+```bash
 add_network
-
+```
 Chỉnh sửa thông tin mạng:
+```bash
 set_network 0 ssid "\"Tên_WiFi\""
 set_network 0 psk "\"Mật_khẩu_WiFi\""
-
+```
 Kích hoạt mạng:
+```bash
 enable_network 0
-
+```
 Lưu cấu hình:
+```bash
 save_config
-
+```
 Kết nối mạng:
+```bash
 select_network 0
-
+```
 Kiểm tra kết nối:
 Sau khi thực hiện các lệnh trên, bạn có thể kiểm tra trạng thái kết nối WiFi bằng lệnh:
+```bash
 sudo wpa_cli status
-
+```
 # 1. Mở wpa_cli
+```bash
 sudo wpa_cli
-
+```
 # 2. Quét mạng WiFi xung quanh
+```bash
 scan
-
+```
 # 3. Xem kết quả quét
+```bash
 scan_results
-
+```
 # 4. Thêm mạng WiFi
 add_network
 # Lệnh này sẽ trả về một ID mạng (thường là 0 nếu bạn chưa thêm mạng nào trước đó).
